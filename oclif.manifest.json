@@ -78,7 +78,7 @@
     "forcefw:tests:run": {
       "aliases": [],
       "args": {},
-      "description": "The tests are first run in parallel. Any tests that fail to run due to a ROW LOCK error are re-run synchronously.\r\nOnce the re-run has completed, any tests that failed in both parallel and synchronously are reported.",
+      "description": "The tests are first run in parallel. Any tests that fail to run due to a ROW LOCK error are re-run synchronously.\nOnce the re-run has completed, any tests that failed in both parallel and synchronously are reported.",
       "examples": [
         "Run all tests:\n<%= config.bin %> <%= command.id %>"
       ],
