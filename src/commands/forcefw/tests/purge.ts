@@ -17,7 +17,7 @@ import { SfCommand, Flags } from '@salesforce/sf-plugins-core';
 import { Messages } from '@salesforce/core';
 
 Messages.importMessagesDirectoryFromMetaUrl(import.meta.url);
-const messages = Messages.loadMessages('@markbrennand/forcefw', 'forcefw.tests.purge');
+const messages = Messages.loadMessages('forcefw', 'forcefw.tests.purge');
 
 export default class Purge extends SfCommand<void> {
   public static readonly summary = messages.getMessage('summary');
