@@ -52,8 +52,8 @@ export default class Purge extends SfCommand<void> {
     while (deleted < limit) {
       const queryLimit = limit - deleted < 200 ? limit - deleted : 200;
 
-      // eslint-disable-next-line no-await-in-loop
       const results = (
+        // eslint-disable-next-line no-await-in-loop
         await connection.query('SELECT Id FROM ApexTestResult ORDER BY TestTimestamp LIMIT ' + queryLimit)
       ).records;
 
