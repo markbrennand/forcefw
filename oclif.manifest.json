@@ -1,0 +1,155 @@
+{
+  "commands": {
+    "forcefw:tests:purge": {
+      "aliases": [],
+      "args": {},
+      "description": "All Apex test results will be purged in the chosen org.",
+      "examples": [
+        "Purge all Apex unit test results:\n<%= config.bin %> <%= command.id %>"
+      ],
+      "flags": {
+        "json": {
+          "description": "Format output as json.",
+          "helpGroup": "GLOBAL",
+          "name": "json",
+          "allowNo": false,
+          "type": "boolean"
+        },
+        "flags-dir": {
+          "helpGroup": "GLOBAL",
+          "name": "flags-dir",
+          "summary": "Import flag values from a directory.",
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "target-org": {
+          "char": "o",
+          "name": "target-org",
+          "noCacheDefault": true,
+          "summary": "Username or alias of the target org.",
+          "hasDynamicHelp": true,
+          "multiple": false,
+          "type": "option"
+        },
+        "verbose": {
+          "char": "v",
+          "name": "verbose",
+          "summary": "Setting this flag will produce output recording command's progress.",
+          "allowNo": false,
+          "type": "boolean"
+        },
+        "limit": {
+          "char": "l",
+          "name": "limit",
+          "summary": "Sets the number of Apex test results to be purged. If unset, all results will be purged.",
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        }
+      },
+      "hasDynamicHelp": true,
+      "hiddenAliases": [],
+      "id": "forcefw:tests:purge",
+      "pluginAlias": "forcefw",
+      "pluginName": "forcefw",
+      "pluginType": "core",
+      "strict": true,
+      "summary": "Removes all Apex test results from an org.",
+      "enableJsonFlag": true,
+      "isESM": true,
+      "relativePath": [
+        "lib",
+        "commands",
+        "forcefw",
+        "tests",
+        "purge.js"
+      ],
+      "aliasPermutations": [],
+      "permutations": [
+        "forcefw:tests:purge",
+        "tests:forcefw:purge",
+        "tests:purge:forcefw",
+        "forcefw:purge:tests",
+        "purge:forcefw:tests",
+        "purge:tests:forcefw"
+      ]
+    },
+    "forcefw:tests:run": {
+      "aliases": [],
+      "args": {},
+      "description": "The tests are first run in parallel. Any tests that fail to run due to a ROW LOCK error are re-run synchronously.\nOnce the re-run has completed, any tests that failed in both parallel and synchronously are reported.",
+      "examples": [
+        "Run all tests:\n<%= config.bin %> <%= command.id %>"
+      ],
+      "flags": {
+        "json": {
+          "description": "Format output as json.",
+          "helpGroup": "GLOBAL",
+          "name": "json",
+          "allowNo": false,
+          "type": "boolean"
+        },
+        "flags-dir": {
+          "helpGroup": "GLOBAL",
+          "name": "flags-dir",
+          "summary": "Import flag values from a directory.",
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "target-org": {
+          "char": "o",
+          "name": "target-org",
+          "noCacheDefault": true,
+          "summary": "Username or alias of the target org.",
+          "hasDynamicHelp": true,
+          "multiple": false,
+          "type": "option"
+        },
+        "output-file": {
+          "char": "f",
+          "name": "output-file",
+          "summary": "Output file for results. Filename extension determines data format used. Two formats are supported. For CSV use .csv. For JSON use .json",
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "verbose": {
+          "char": "v",
+          "name": "verbose",
+          "summary": "Setting this flag will produce output recording command's progress.",
+          "allowNo": false,
+          "type": "boolean"
+        }
+      },
+      "hasDynamicHelp": true,
+      "hiddenAliases": [],
+      "id": "forcefw:tests:run",
+      "pluginAlias": "forcefw",
+      "pluginName": "forcefw",
+      "pluginType": "core",
+      "strict": true,
+      "summary": "Runs all non-namespaced unit tests in an org.",
+      "enableJsonFlag": true,
+      "isESM": true,
+      "relativePath": [
+        "lib",
+        "commands",
+        "forcefw",
+        "tests",
+        "run.js"
+      ],
+      "aliasPermutations": [],
+      "permutations": [
+        "forcefw:tests:run",
+        "tests:forcefw:run",
+        "tests:run:forcefw",
+        "forcefw:run:tests",
+        "run:forcefw:tests",
+        "run:tests:forcefw"
+      ]
+    }
+  },
+  "version": "1.0.0"
+}
