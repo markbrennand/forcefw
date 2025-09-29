@@ -1,5 +1,5 @@
 {
-  "name": "@markbrennand/forcefw",
+  "name": "forcefw",
   "description": "Plugin for development teams use",
   "version": "1.0.0",
   "author": "Mark Brennand",
@@ -32,7 +32,7 @@
     "/oclif.manifest.json",
     "/schemas"
   ],
-  "homepage": "https://github.com/markbrennand/force-framework",
+  "homepage": "https://github.com/markbrennand/forcefw",
   "keywords": [
     "force",
     "salesforce",
@@ -59,7 +59,7 @@
     },
     "flexibleTaxonomy": true
   },
-  "repository": "markbrennand/force-framework",
+  "repository": "markbrennand/forcefw",
   "scripts": {
     "build": "wireit",
     "clean": "sf-clean",
