@@ -9,7 +9,7 @@
     "@salesforce/core": "^8.23.1",
     "@salesforce/kit": "^3.2.4",
     "@salesforce/sf-plugins-core": "^12",
-    "@salesforce/apex-node": "8.3.3"
+    "@salesforce/apex-node": "7.0.4"
   },
   "devDependencies": {
     "@oclif/plugin-command-snapshot": "^5.3.6",
