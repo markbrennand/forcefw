@@ -51,8 +51,8 @@
       "hasDynamicHelp": true,
       "hiddenAliases": [],
       "id": "forcefw:tests:purge",
-      "pluginAlias": "forcefw",
-      "pluginName": "forcefw",
+      "pluginAlias": "@markbrennand/sf-plugin-forcefw",
+      "pluginName": "@markbrennand/sf-plugin-forcefw",
       "pluginType": "core",
       "strict": true,
       "summary": "Removes all Apex test results from an org.",
@@ -78,7 +78,7 @@
     "forcefw:tests:run": {
       "aliases": [],
       "args": {},
-      "description": "The tests are first run in parallel. Any tests that fail to run due to a ROW LOCK error are re-run synchronously.\nOnce the re-run has completed, any tests that failed in both parallel and synchronously are reported.",
+      "description": "The tests are first run in parallel. Any tests that fail to run due to a ROW LOCK error are re-run synchronously.\r\nOnce the re-run has completed, any tests that failed in both parallel and synchronously are reported.",
       "examples": [
         "Run all tests:\n<%= config.bin %> <%= command.id %>"
       ],
@@ -126,8 +126,8 @@
       "hasDynamicHelp": true,
       "hiddenAliases": [],
       "id": "forcefw:tests:run",
-      "pluginAlias": "forcefw",
-      "pluginName": "forcefw",
+      "pluginAlias": "@markbrennand/sf-plugin-forcefw",
+      "pluginName": "@markbrennand/sf-plugin-forcefw",
       "pluginType": "core",
       "strict": true,
       "summary": "Runs all non-namespaced unit tests in an org.",

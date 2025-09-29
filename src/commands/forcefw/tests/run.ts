@@ -37,7 +37,7 @@ import {
 } from '../../../shared/apex/helper.js';
 
 Messages.importMessagesDirectoryFromMetaUrl(import.meta.url);
-const messages = Messages.loadMessages('forcefw', 'forcefw.tests.run');
+const messages = Messages.loadMessages('@markbrennand/sf-plugin-forcefw', 'forcefw.tests.run');
 
 export default class Run extends SfCommand<void> {
   public static readonly summary = messages.getMessage('summary');
