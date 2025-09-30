@@ -17,7 +17,7 @@ import { SfCommand, Flags } from '@salesforce/sf-plugins-core';
 import { Messages } from '@salesforce/core';
 
 Messages.importMessagesDirectoryFromMetaUrl(import.meta.url);
-const messages = Messages.loadMessages('@markbrennand/sf-plugin-forcefw', 'forcefw.tests.purge');
+const messages = Messages.loadMessages('@markbrennand/sf-plugin-forcefw', 'forcefw.log.purge');
 
 export default class Purge extends SfCommand<void> {
   public static readonly summary = messages.getMessage('summary');
@@ -54,27 +54,27 @@ export default class Purge extends SfCommand<void> {
 
       const results = (
         // eslint-disable-next-line no-await-in-loop
-        await connection.query('SELECT Id FROM ApexTestResult ORDER BY TestTimestamp LIMIT ' + queryLimit)
+        await connection.query('SELECT Id FROM ApexLog ORDER BY StartTime LIMIT ' + queryLimit)
       ).records;
 
       if (results.length === 0) {
         if (this.verbose && deleted === 0) {
-          this.log('-- no test results found');
+          this.log('-- no log records found');
         }
         break;
       }
 
       if (this.verbose) {
-        this.log('-- found ' + results.length + ' test results to delete');
+        this.log('-- found ' + results.length + ' log records to delete');
       }
 
       const ids = results.map((result) => result.Id) as string[];
-      await connection.delete('ApexTestResult', ids); // eslint-disable-line no-await-in-loop
+      await connection.delete('ApexLog', ids); // eslint-disable-line no-await-in-loop
       deleted += ids.length;
     }
 
     if (this.verbose && deleted > 0) {
-      this.log('-- ' + deleted + ' test results deleted');
+      this.log('-- ' + deleted + ' log record(s) deleted');
     }
   }
 }
