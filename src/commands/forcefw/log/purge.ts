@@ -46,7 +46,7 @@ export default class Purge extends SfCommand<void> {
 
     const connection = flags['target-org'].getConnection('64.0');
 
-    const limit = flags.limit ?? 10000;
+    const limit = flags.limit ?? 100000;
     let deleted = 0;
 
     while (deleted < limit) {

@@ -1,5 +1,80 @@
 {
   "commands": {
+    "forcefw:log:purge": {
+      "aliases": [],
+      "args": {},
+      "description": "All Apex Log records will be purged in the chosen org.",
+      "examples": [
+        "Purge all Apex Log records:\n<%= config.bin %> <%= command.id %>"
+      ],
+      "flags": {
+        "json": {
+          "description": "Format output as json.",
+          "helpGroup": "GLOBAL",
+          "name": "json",
+          "allowNo": false,
+          "type": "boolean"
+        },
+        "flags-dir": {
+          "helpGroup": "GLOBAL",
+          "name": "flags-dir",
+          "summary": "Import flag values from a directory.",
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "target-org": {
+          "char": "o",
+          "name": "target-org",
+          "noCacheDefault": true,
+          "summary": "Username or alias of the target org.",
+          "hasDynamicHelp": true,
+          "multiple": false,
+          "type": "option"
+        },
+        "verbose": {
+          "char": "v",
+          "name": "verbose",
+          "summary": "Setting this flag will produce output recording command's progress.",
+          "allowNo": false,
+          "type": "boolean"
+        },
+        "limit": {
+          "char": "l",
+          "name": "limit",
+          "summary": "Sets the number of Apex Log records to be purged. If unset, all results will be purged.",
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        }
+      },
+      "hasDynamicHelp": true,
+      "hiddenAliases": [],
+      "id": "forcefw:log:purge",
+      "pluginAlias": "@markbrennand/sf-plugin-forcefw",
+      "pluginName": "@markbrennand/sf-plugin-forcefw",
+      "pluginType": "core",
+      "strict": true,
+      "summary": "Removes all Apex Log (debug) records from an org.",
+      "enableJsonFlag": true,
+      "isESM": true,
+      "relativePath": [
+        "lib",
+        "commands",
+        "forcefw",
+        "log",
+        "purge.js"
+      ],
+      "aliasPermutations": [],
+      "permutations": [
+        "forcefw:log:purge",
+        "log:forcefw:purge",
+        "log:purge:forcefw",
+        "forcefw:purge:log",
+        "purge:forcefw:log",
+        "purge:log:forcefw"
+      ]
+    },
     "forcefw:tests:purge": {
       "aliases": [],
       "args": {},
@@ -148,81 +223,6 @@
         "forcefw:run:tests",
         "run:forcefw:tests",
         "run:tests:forcefw"
-      ]
-    },
-    "forcefw:log:purge": {
-      "aliases": [],
-      "args": {},
-      "description": "All Apex Log records will be purged in the chosen org.",
-      "examples": [
-        "Purge all Apex Log records:\n<%= config.bin %> <%= command.id %>"
-      ],
-      "flags": {
-        "json": {
-          "description": "Format output as json.",
-          "helpGroup": "GLOBAL",
-          "name": "json",
-          "allowNo": false,
-          "type": "boolean"
-        },
-        "flags-dir": {
-          "helpGroup": "GLOBAL",
-          "name": "flags-dir",
-          "summary": "Import flag values from a directory.",
-          "hasDynamicHelp": false,
-          "multiple": false,
-          "type": "option"
-        },
-        "target-org": {
-          "char": "o",
-          "name": "target-org",
-          "noCacheDefault": true,
-          "summary": "Username or alias of the target org.",
-          "hasDynamicHelp": true,
-          "multiple": false,
-          "type": "option"
-        },
-        "verbose": {
-          "char": "v",
-          "name": "verbose",
-          "summary": "Setting this flag will produce output recording command's progress.",
-          "allowNo": false,
-          "type": "boolean"
-        },
-        "limit": {
-          "char": "l",
-          "name": "limit",
-          "summary": "Sets the number of Apex Log records to be purged. If unset, all results will be purged.",
-          "hasDynamicHelp": false,
-          "multiple": false,
-          "type": "option"
-        }
-      },
-      "hasDynamicHelp": true,
-      "hiddenAliases": [],
-      "id": "forcefw:log:purge",
-      "pluginAlias": "@markbrennand/sf-plugin-forcefw",
-      "pluginName": "@markbrennand/sf-plugin-forcefw",
-      "pluginType": "core",
-      "strict": true,
-      "summary": "Removes all Apex Log (debug) records from an org.",
-      "enableJsonFlag": true,
-      "isESM": true,
-      "relativePath": [
-        "lib",
-        "commands",
-        "forcefw",
-        "log",
-        "purge.js"
-      ],
-      "aliasPermutations": [],
-      "permutations": [
-        "forcefw:log:purge",
-        "log:forcefw:purge",
-        "log:purge:forcefw",
-        "forcefw:purge:log",
-        "purge:forcefw:log",
-        "purge:log:forcefw"
       ]
     }
   },
